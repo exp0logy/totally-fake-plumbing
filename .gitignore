@@ -1,0 +1,26 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# AI assistant files — keep all of these out of the repo
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+.mcp.json
+.cursor/
+.cursorrules
+.cursorignore
+.windsurf/
+.windsurfrules
+.aider*
+.copilot/
+copilot-instructions.md
+.github/copilot-instructions.md
+GEMINI.md
+.gemini/
+.codeium/
+.continue/
