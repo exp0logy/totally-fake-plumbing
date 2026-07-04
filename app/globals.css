@@ -101,8 +101,8 @@ body {
   color: var(--ink); text-decoration: none;
 }
 .mobile-menu > a:not(.call-btn):hover { color: var(--copper-bright); }
-@media (max-width: 760px) {
-  .nav-links a:not(.call-btn) { display: none; }
+@media (max-width: 768px) {
+  .nav-links a { display: none; }
   .menu-btn { display: grid; }
 }
 
