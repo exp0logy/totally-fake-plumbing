@@ -77,17 +77,6 @@ export default function Home() {
       <main>
         <ScrollVideoHero />
 
-        <aside className="strip" aria-label="Emergency call-out">
-          <div className="strip-inner">
-            <span className="dot" aria-hidden="true" />
-            <span>
-              <strong>Burst pipe? No hot water?</strong> Emergency plumbers on
-              call 24/7 across Sydney —
-            </span>
-            <a href={CALL_HREF}>{PHONE_DISPLAY}</a>
-          </div>
-        </aside>
-
         <section className="services" id="services" aria-labelledby="services-title">
           <div className="wrap">
             <div className="reveal">
