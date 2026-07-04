@@ -5,7 +5,7 @@ A landing page for a plumbing business that does not exist — built to show off
 scroll, with the video's playback position mapped directly to scroll progress
 instead of autoplaying.
 
-**Live demo → https://nimble-sopapillas-8c292d.netlify.app/**
+**Live demo → https://fake-plumbing.netlify.app/**
 
 ## How the scroll-scrub works
 
