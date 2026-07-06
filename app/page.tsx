@@ -60,7 +60,7 @@ const STATS = [
   { value: "15+", label: "Years serving Sydney homes and businesses", count: "15", suffix: "+" },
   { value: "12,000+", label: "Jobs completed — and counting", count: "12000", suffix: "+" },
   { value: "<60min", label: "Average emergency response time, metro-wide", count: "60", prefix: "<", suffix: "min" },
-  { value: "4.9★", label: "Average rating from 900+ imaginary reviews", count: "4.9", decimals: "1", suffix: "★" },
+  { value: "4.9★", label: "Average rating from 900+ imaginary reviews", count: "4.9", start: "5.0", decimals: "1", suffix: "★" },
 ];
 
 const WHY = [
@@ -127,6 +127,7 @@ export default function Home() {
                   <div
                     className="num"
                     data-count={s.count}
+                    data-start={s.start}
                     data-prefix={s.prefix}
                     data-suffix={s.suffix}
                     data-decimals={s.decimals}

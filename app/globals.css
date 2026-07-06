@@ -91,7 +91,7 @@ body {
   position: fixed; inset: 0; z-index: 49;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 2rem; padding: 2rem;
-  background: rgba(24, 31, 34, 0.96);
+  background: rgba(20, 26, 29, 0.99);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s;
 }
@@ -181,6 +181,11 @@ body {
   50% { transform: rotate(45deg) translate(3px, 3px); opacity: 1; }
 }
 .scrub-stage.past-start .scroll-hint { opacity: 0; }
+/* The opening caption already says "keep scrolling" and the emergency strip
+   owns the bottom edge on small screens — the pill just collides with both. */
+@media (max-width: 640px) {
+  .scroll-hint { display: none; }
+}
 
 /* captions keyed to scrub progress */
 .caption {
@@ -279,6 +284,11 @@ html.js .reveal:not(.in) { opacity: 0; transform: translateY(30px); }
   background: linear-gradient(90deg, rgba(42, 29, 20, 0.85), rgba(58, 37, 23, 0.85) 50%, rgba(42, 29, 20, 0.85));
   backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   border-bottom: none;
+}
+/* Keep the strip to a single short line on phones so it doesn't eat the hero */
+@media (max-width: 640px) {
+  .strip-tail { display: none; }
+  .strip-inner { padding-top: 0.7rem; padding-bottom: 0.7rem; font-size: 0.88rem; }
 }
 
 /* ---------- Services ---------- */
