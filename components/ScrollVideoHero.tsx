@@ -206,8 +206,11 @@ export default function ScrollVideoHero() {
           <div className="strip-inner">
             <span className="dot" aria-hidden="true" />
             <span>
-              <strong>Burst pipe? No hot water?</strong> Emergency plumbers on
-              call 24/7 across Sydney —
+              <strong>Burst pipe? No hot water?</strong>
+              <span className="strip-tail">
+                {" "}
+                Emergency plumbers on call 24/7 across Sydney —
+              </span>
             </span>
             <a href={CALL_HREF}>{PHONE_DISPLAY}</a>
           </div>

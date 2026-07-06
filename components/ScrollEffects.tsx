@@ -35,6 +35,9 @@ export default function ScrollEffects() {
           nio.unobserve(e.target);
           const el = e.target as HTMLElement;
           const end = parseFloat(el.dataset.count ?? "0");
+          // Optional start value so stats like a star rating don't count up
+          // through unflattering numbers on their way to the real one.
+          const start = parseFloat(el.dataset.start ?? "0");
           const dec = Number(el.dataset.decimals ?? 0);
           const pre = el.dataset.prefix ?? "";
           const suf = el.dataset.suffix ?? "";
@@ -54,7 +57,7 @@ export default function ScrollEffects() {
           const tick = (t: number) => {
             const k = Math.min(1, (t - t0) / dur);
             const eased = 1 - Math.pow(1 - k, 3);
-            el.textContent = fmt(end * eased);
+            el.textContent = fmt(start + (end - start) * eased);
             if (k < 1) requestAnimationFrame(tick);
           };
           tick(t0);
